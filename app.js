@@ -8,7 +8,7 @@ app.use("/api", indexRouter);
 const mongoURI = `mongodb://localhost:27017/todo-demo`;
 
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true })
+  .connect(mongoURI)
   .then(() => {
     console.log("mongoose connected");
   })
@@ -16,6 +16,6 @@ mongoose
     console.log("DB connection fail", err);
   });
 
-app.listen(5000, () => {
-  console.log("server on 5000");
+app.listen(5050, () => {
+  console.log("server on 5050");
 });
