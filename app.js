@@ -23,6 +23,16 @@ mongoose
     console.log("DB connection fail", err);
   });
 
-app.listen(5050, () => {
+app.listen(process.env.PORT || 5050, () => {
   console.log("server on 5050");
 });
+
+//1. 회원가입
+// 유저가 이메일, 패스워드, 유저이름을 입력해서 보냄
+// 받은 정보를 저장함 (데이터베이스 모델 필요)
+// 패스워드를 암호화 시켜서 저장
+
+//1. 라우터 
+//2. 모델
+//3. 데이터를 저장 (이미 가입된 유저 유무,패스워드 암호화)
+//4. 응답을 보낸다
